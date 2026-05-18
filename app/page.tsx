@@ -1,65 +1,146 @@
-import Image from "next/image";
+import Header from "@/components/layout/Header";
+import KpiCard from "@/components/dashboard/KpiCard";
+import AlertPanel from "@/components/dashboard/AlertPanel";
+import { BORChart, KunjunganChart, MortalitasChart } from "@/components/dashboard/TrendChart";
+import { kpiDashboard, occupancyHarian } from "@/lib/dummy-data";
+import { getOccupancyColor } from "@/lib/utils";
+import {
+  Users,
+  BedDouble,
+  Ambulance,
+  Activity,
+  Heart,
+  Clock,
+  TrendingUp,
+  AlertTriangle,
+} from "lucide-react";
 
-export default function Home() {
+export default function DashboardPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      <Header
+        title="Dashboard Executive"
+        subtitle="RS Harapan Sehat Nasional — Periode Mei 2026"
+      />
+
+      <div className="p-6 space-y-6">
+        {/* KPI Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <KpiCard
+            title="Total Kunjungan"
+            value={kpiDashboard.totalKunjungan}
+            unit="pasien"
+            icon={Users}
+            color="blue"
+            trend={3.2}
+            subtitle="Mei 2026"
+          />
+          <KpiCard
+            title="BOR"
+            value={`${kpiDashboard.bor}%`}
+            icon={BedDouble}
+            color="green"
+            trend={-1.5}
+            subtitle="Bed Occupancy Rate"
+          />
+          <KpiCard
+            title="Occupancy ICU"
+            value={`${kpiDashboard.occupancyICU}%`}
+            icon={Activity}
+            color="red"
+            trend={5.0}
+            subtitle="Kapasitas penuh"
+          />
+          <KpiCard
+            title="Rawat Inap"
+            value={kpiDashboard.pasienRawatInap}
+            unit="pasien"
+            icon={Heart}
+            color="purple"
+            trend={2.0}
+            subtitle="Masuk bulan ini"
+          />
+          <KpiCard
+            title="Kunjungan IGD"
+            value={kpiDashboard.kunjunganIGD}
+            unit="pasien"
+            icon={Ambulance}
+            color="yellow"
+            trend={4.1}
+            subtitle="Bulan berjalan"
+          />
+          <KpiCard
+            title="Mortalitas"
+            value={`${kpiDashboard.mortalitas}%`}
+            icon={AlertTriangle}
+            color="red"
+            trend={0.2}
+            subtitle="GDR bulan ini"
+          />
+          <KpiCard
+            title="Rata-rata Tunggu"
+            value={kpiDashboard.waitingTime}
+            unit="menit"
+            icon={Clock}
+            color="blue"
+            trend={-3.0}
+            subtitle="Rawat Jalan"
+          />
+          <KpiCard
+            title="Total Tempat Tidur"
+            value={kpiDashboard.totalBed}
+            unit="TT"
+            icon={TrendingUp}
+            color="green"
+            subtitle="Kapasitas aktif"
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Charts Row */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <BORChart />
+          <KunjunganChart />
         </div>
-      </main>
+
+        {/* Bottom Row */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <MortalitasChart />
+
+          {/* Occupancy per Unit */}
+          <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+            <h3 className="font-semibold text-gray-900 mb-4">Occupancy per Unit</h3>
+            <div className="space-y-3">
+              {occupancyHarian.map((unit) => (
+                <div key={unit.unit}>
+                  <div className="flex justify-between text-sm mb-1">
+                    <span className="text-gray-700 font-medium">{unit.unit}</span>
+                    <span
+                      className={
+                        unit.occupancy >= 90
+                          ? "text-red-600 font-bold"
+                          : unit.occupancy >= 75
+                          ? "text-yellow-600 font-semibold"
+                          : "text-green-600 font-semibold"
+                      }
+                    >
+                      {unit.occupancy}%
+                    </span>
+                  </div>
+                  <div className="w-full bg-gray-100 rounded-full h-2">
+                    <div
+                      className={`h-2 rounded-full ${getOccupancyColor(unit.occupancy)}`}
+                      style={{ width: `${unit.occupancy}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Alert Panel */}
+          <AlertPanel />
+        </div>
+      </div>
     </div>
   );
 }
