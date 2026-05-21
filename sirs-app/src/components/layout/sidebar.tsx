@@ -58,11 +58,11 @@ const navItems: NavItem[] = [
     children: [
       { href: '/rl3/sensus-harian', label: 'Sensus Harian', icon: <Calendar className="w-3.5 h-3.5" /> },
       { href: '/rl3/indikator', label: 'Indikator (RL 3.1)', icon: <Activity className="w-3.5 h-3.5" /> },
-      { href: '/rl3/rawat-inap', label: 'Rawat Inap (RL 3.2)', icon: <BedDouble className="w-3.5 h-3.5" /> },
-      { href: '/rl3/igd', label: 'IGD (RL 3.4)', icon: <Ambulance className="w-3.5 h-3.5" /> },
-      { href: '/rl3/kebidanan', label: 'Kebidanan (RL 3.6)', icon: <Baby className="w-3.5 h-3.5" /> },
-      { href: '/rl3/laboratorium', label: 'Laboratorium (RL 3.8)', icon: <FlaskConical className="w-3.5 h-3.5" /> },
-      { href: '/rl3/farmasi', label: 'Farmasi (RL 3.17)', icon: <Pill className="w-3.5 h-3.5" /> },
+      { href: '/coming-soon', label: 'Rawat Inap (RL 3.2)', icon: <BedDouble className="w-3.5 h-3.5" /> },
+      { href: '/coming-soon', label: 'IGD (RL 3.4)', icon: <Ambulance className="w-3.5 h-3.5" /> },
+      { href: '/coming-soon', label: 'Kebidanan (RL 3.6)', icon: <Baby className="w-3.5 h-3.5" /> },
+      { href: '/coming-soon', label: 'Laboratorium (RL 3.8)', icon: <FlaskConical className="w-3.5 h-3.5" /> },
+      { href: '/coming-soon', label: 'Farmasi (RL 3.17)', icon: <Pill className="w-3.5 h-3.5" /> },
     ],
   },
   {
@@ -71,7 +71,7 @@ const navItems: NavItem[] = [
     icon: <Stethoscope className="w-4 h-4" />,
   },
   {
-    href: '/rl5',
+    href: '/coming-soon',
     label: 'RL 5 — Morbiditas RJ',
     icon: <ClipboardList className="w-4 h-4" />,
   },
