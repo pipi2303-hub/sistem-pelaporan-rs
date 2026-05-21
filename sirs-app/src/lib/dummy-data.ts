@@ -398,6 +398,77 @@ export const kelompokUmur = [
   '65-74 tahun', '> 75 tahun',
 ]
 
+// --- Rawat Inap per Jenis Pelayanan (RL 3.2) ---
+export const rawatInapPelayanan = [
+  { pelayanan: 'Penyakit Dalam', awal: 45, masuk: 120, pindahan: 12, keluarHidup: 115, keluarMatiLt48: 3, keluarMatiGe48: 5, dipindahkan: 8, akhir: 46, hariRawat: 850 },
+  { pelayanan: 'Bedah', awal: 30, masuk: 95, pindahan: 8, keluarHidup: 88, keluarMatiLt48: 1, keluarMatiGe48: 2, dipindahkan: 12, akhir: 30, hariRawat: 520 },
+  { pelayanan: 'Kesehatan Anak', awal: 25, masuk: 80, pindahan: 5, keluarHidup: 82, keluarMatiLt48: 1, keluarMatiGe48: 1, dipindahkan: 4, akhir: 22, hariRawat: 410 },
+  { pelayanan: 'Obstetri', awal: 18, masuk: 110, pindahan: 2, keluarHidup: 108, keluarMatiLt48: 0, keluarMatiGe48: 0, dipindahkan: 2, akhir: 20, hariRawat: 340 },
+  { pelayanan: 'Ginekologi', awal: 10, masuk: 45, pindahan: 1, keluarHidup: 42, keluarMatiLt48: 0, keluarMatiGe48: 0, dipindahkan: 3, akhir: 11, hariRawat: 180 },
+  { pelayanan: 'Bedah Saraf', awal: 12, masuk: 28, pindahan: 4, keluarHidup: 22, keluarMatiLt48: 2, keluarMatiGe48: 4, dipindahkan: 2, akhir: 14, hariRawat: 290 },
+  { pelayanan: 'Saraf', awal: 20, masuk: 55, pindahan: 6, keluarHidup: 52, keluarMatiLt48: 1, keluarMatiGe48: 3, dipindahkan: 5, akhir: 20, hariRawat: 420 },
+  { pelayanan: 'Jantung', awal: 15, masuk: 62, pindahan: 5, keluarHidup: 58, keluarMatiLt48: 2, keluarMatiGe48: 5, dipindahkan: 3, akhir: 14, hariRawat: 380 },
+]
+
+// --- Kunjungan IGD (RL 3.4) ---
+export const dataIGD = {
+  totalKunjungan: 1245,
+  tindakLanjut: {
+    rawatInap: 450,
+    rawatJalan: 680,
+    dirujuk: 45,
+    pulangPaksa: 12,
+    matiDiIgd: 38,
+    doa: 20
+  },
+  caraBayar: [
+    { label: 'JKN', value: 850 },
+    { label: 'Mandiri', value: 245 },
+    { label: 'Asuransi Lain', value: 150 }
+  ],
+  waktuTunggu: 18.5 // menit
+}
+
+// --- Kebidanan (RL 3.6) ---
+export const dataKebidanan = {
+  persalinan: [
+    { jenis: 'Persalinan Normal', jumlah: 145, rujukan: 20, nonRujukan: 125, matiIbu: 0 },
+    { jenis: 'Persalinan Sungsang / Vakum', jumlah: 24, rujukan: 18, nonRujukan: 6, matiIbu: 0 },
+    { jenis: 'Persalinan Sectio Caesarea', jumlah: 82, rujukan: 55, nonRujukan: 27, matiIbu: 1 },
+  ],
+  komplikasi: [
+    { jenis: 'Pendarahan', jumlah: 12 },
+    { jenis: 'Pre-eklampsia', jumlah: 18 },
+    { jenis: 'Infeksi', jumlah: 4 },
+  ]
+}
+
+// --- Laboratorium (RL 3.8) ---
+export const dataLaboratorium = [
+  { jenis: 'Hematologi', ri: 1250, rj: 1800, igd: 950, luar: 120 },
+  { jenis: 'Kimia Klinik', ri: 2100, rj: 2450, igd: 1100, luar: 240 },
+  { jenis: 'Imunologi', ri: 450, rj: 820, igd: 150, luar: 85 },
+  { jenis: 'Mikrobiologi', ri: 180, rj: 120, igd: 40, luar: 15 },
+  { jenis: 'Urinalisis', ri: 850, rj: 1100, igd: 600, luar: 90 },
+]
+
+// --- Farmasi (RL 3.17) ---
+export const dataFarmasi = [
+  { kelompok: 'Obat Generik Fornas', resepRi: 1450, resepRj: 3200, resepIgd: 850 },
+  { kelompok: 'Obat Generik Non-Fornas', resepRi: 420, resepRj: 1100, resepIgd: 240 },
+  { kelompok: 'Obat Non-Generik Fornas', resepRi: 850, resepRj: 1400, resepIgd: 310 },
+  { kelompok: 'Obat Non-Generik Non-Fornas', resepRi: 320, resepRj: 650, resepIgd: 120 },
+]
+
+// --- Morbiditas Rawat Jalan (RL 5.1) ---
+export const morbiditasRJ: MorbiditasRI[] = [
+  { id: 1, kode: 'I10', diagnosis: 'Hipertensi Esensial', kelUmur: '45-54', lBaru: 450, pBaru: 580, lMati: 0, pMati: 0, hariRawat: 0 },
+  { id: 2, kode: 'E11.9', diagnosis: 'Diabetes Mellitus Tipe 2', kelUmur: '45-54', lBaru: 320, pBaru: 410, lMati: 0, pMati: 0, hariRawat: 0 },
+  { id: 3, kode: 'I25.9', diagnosis: 'Penyakit Jantung Iskemik Kronis', kelUmur: '55-64', lBaru: 280, pBaru: 150, lMati: 0, pMati: 0, hariRawat: 0 },
+  { id: 4, kode: 'A15.0', diagnosis: 'Tuberkulosis Paru', kelUmur: '25-34', lBaru: 120, pBaru: 95, lMati: 0, pMati: 0, hariRawat: 0 },
+  { id: 5, kode: 'K29.7', diagnosis: 'Gastritis, tidak spesifik', kelUmur: '15-24', lBaru: 180, pBaru: 240, lMati: 0, pMati: 0, hariRawat: 0 },
+]
+
 // --- Info Rumah Sakit ---
 export const infoRS = {
   nama: 'RSUD Dr. Soetomo',
