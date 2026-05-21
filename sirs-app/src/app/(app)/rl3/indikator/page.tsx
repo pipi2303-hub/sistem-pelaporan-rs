@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { indikatorPerKelas } from '@/lib/dummy-data'
-import { Zap, Info, Send, CheckCircle2, BarChart3 } from 'lucide-react'
+import { Zap, Info, Send, CheckCircle2, BarChart3, FileText } from 'lucide-react'
 import clsx from 'clsx'
 
 const PERIODES = ['Mei 2026', 'Apr 2026', 'Mar 2026', 'Feb 2026', 'Jan 2026']
@@ -47,10 +47,19 @@ export default function IndikatorPage() {
             <p className="text-sm text-slate-500">BOR, ALOS, BTO, TOI, NDR, GDR — auto-generate dari sensus harian</p>
           </div>
         </div>
-        <select value={periode} onChange={e => setPeriode(e.target.value)}
-          className="px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-          {PERIODES.map(p => <option key={p}>{p}</option>)}
-        </select>
+        <div className="flex items-center gap-2">
+          <a
+            href="/reports/RL3.pdf"
+            download
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-600 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-all shadow-sm"
+          >
+            <FileText className="w-4 h-4" /> Cetak PDF
+          </a>
+          <select value={periode} onChange={e => setPeriode(e.target.value)}
+            className="px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+            {PERIODES.map(p => <option key={p}>{p}</option>)}
+          </select>
+        </div>
       </div>
 
       {/* Summary cards */}

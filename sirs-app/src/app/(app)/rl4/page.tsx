@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { morbiditasRI, icd10List, kelompokUmur, sepuluhBesarPenyakit, type MorbiditasRI } from '@/lib/dummy-data'
-import { Plus, Search, X, CheckCircle2, AlertTriangle, Trophy, Microscope } from 'lucide-react'
+import { Plus, Search, X, CheckCircle2, AlertTriangle, Trophy, Microscope, FileText } from 'lucide-react'
 import clsx from 'clsx'
 
 export default function MorbiditasRIPage() {
@@ -73,10 +73,19 @@ export default function MorbiditasRIPage() {
             <p className="text-sm text-slate-500">Data diagnosis per ICD-10, kelompok umur &amp; jenis kelamin — Tahunan 2025</p>
           </div>
         </div>
-        <button onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-700 text-white rounded-lg text-sm font-semibold hover:bg-blue-800 transition-colors shadow-sm">
-          <Plus className="w-4 h-4" /> Tambah Diagnosis
-        </button>
+        <div className="flex items-center gap-2">
+          <a
+            href="/reports/RL4.pdf"
+            download
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-600 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-all shadow-sm"
+          >
+            <FileText className="w-4 h-4" /> Cetak PDF
+          </a>
+          <button onClick={() => setShowModal(true)}
+            className="flex items-center gap-2 px-4 py-2 bg-blue-700 text-white rounded-lg text-sm font-semibold hover:bg-blue-800 transition-colors shadow-sm">
+            <Plus className="w-4 h-4" /> Tambah Diagnosis
+          </button>
+        </div>
       </div>
 
       {/* Summary */}

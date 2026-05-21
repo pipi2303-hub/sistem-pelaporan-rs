@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { infoRS } from '@/lib/dummy-data'
-import { Building2, Save, CheckCircle2, MapPin, Phone, Mail, Globe, Award } from 'lucide-react'
+import { Building2, Save, CheckCircle2, MapPin, Phone, Mail, Globe, Award, FileText } from 'lucide-react'
 import clsx from 'clsx'
 
 export default function ProfilRSPage() {
@@ -55,13 +55,22 @@ export default function ProfilRSPage() {
             <p className="text-sm text-slate-500">Data identitas dan profil {infoRS.nama}</p>
           </div>
         </div>
-        <button onClick={() => setSaved(true)}
-          className={clsx(
-            'flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold transition-all shadow-sm',
-            saved ? 'bg-green-600 text-white' : 'bg-blue-700 text-white hover:bg-blue-800'
-          )}>
-          {saved ? <><CheckCircle2 className="w-4 h-4" /> Tersimpan!</> : <><Save className="w-4 h-4" /> Simpan Perubahan</>}
-        </button>
+        <div className="flex items-center gap-2">
+          <a
+            href="/reports/RL1.pdf"
+            download
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-600 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-all shadow-sm"
+          >
+            <FileText className="w-4 h-4" /> Cetak PDF
+          </a>
+          <button onClick={() => setSaved(true)}
+            className={clsx(
+              'flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold transition-all shadow-sm',
+              saved ? 'bg-green-600 text-white' : 'bg-blue-700 text-white hover:bg-blue-800'
+            )}>
+            {saved ? <><CheckCircle2 className="w-4 h-4" /> Tersimpan!</> : <><Save className="w-4 h-4" /> Simpan Perubahan</>}
+          </button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-5">

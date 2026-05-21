@@ -1,6 +1,6 @@
 'use client'
 
-import { Construction, ArrowLeft } from 'lucide-react'
+import { Construction, ArrowLeft, FileText } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ComingSoonPage() {
@@ -12,10 +12,16 @@ export default function ComingSoonPage() {
       <h1 className="text-2xl font-bold text-slate-900 mb-2">Modul Sedang Dikembangkan</h1>
       <p className="text-slate-500 max-w-md mb-8">
         Halaman ini masih dalam tahap implementasi sesuai blueprint SIRS 6.3.
+        Namun, Anda tetap dapat mengunduh draf laporan simulasi di bawah ini.
       </p>
-      <Link href="/dashboard" className="btn-primary">
-        <ArrowLeft className="w-4 h-4" /> Kembali ke Dashboard
-      </Link>
+      <div className="flex flex-wrap justify-center gap-3">
+        <Link href="/dashboard" className="btn-secondary">
+          <ArrowLeft className="w-4 h-4" /> Kembali
+        </Link>
+        <a href="/reports/RL5.pdf" download className="btn-primary">
+          <FileText className="w-4 h-4" /> Cetak Draft RL 5 (PDF)
+        </a>
+      </div>
     </div>
   )
 }

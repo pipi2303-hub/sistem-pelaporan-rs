@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { ketenagaan } from '@/lib/dummy-data'
-import { Users, RefreshCw, CheckCircle2 } from 'lucide-react'
+import { Users, RefreshCw, CheckCircle2, FileText } from 'lucide-react'
 import clsx from 'clsx'
 
 export default function KetenagaanPage() {
@@ -23,14 +23,23 @@ export default function KetenagaanPage() {
             <p className="text-sm text-slate-500">Data sumber daya manusia kesehatan — Tahunan 2025</p>
           </div>
         </div>
-        <button onClick={() => setSynced(true)}
-          className={clsx(
-            'flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold border transition-all',
-            synced ? 'bg-green-50 border-green-200 text-green-700' : 'bg-white border-slate-300 text-slate-600 hover:border-blue-300 hover:text-blue-700'
-          )}>
-          {synced ? <CheckCircle2 className="w-4 h-4" /> : <RefreshCw className="w-4 h-4" />}
-          {synced ? 'Tersinkronisasi' : 'Sinkronisasi dari SISDMK'}
-        </button>
+        <div className="flex items-center gap-2">
+          <a
+            href="/reports/RL2.pdf"
+            download
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-600 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-all shadow-sm"
+          >
+            <FileText className="w-4 h-4" /> Cetak PDF
+          </a>
+          <button onClick={() => setSynced(true)}
+            className={clsx(
+              'flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold border transition-all',
+              synced ? 'bg-green-50 border-green-200 text-green-700' : 'bg-white border-slate-300 text-slate-600 hover:border-blue-300 hover:text-blue-700'
+            )}>
+            {synced ? <CheckCircle2 className="w-4 h-4" /> : <RefreshCw className="w-4 h-4" />}
+            {synced ? 'Tersinkronisasi' : 'Sinkronisasi dari SISDMK'}
+          </button>
+        </div>
       </div>
 
       {/* Summary cards */}

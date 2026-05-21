@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { kelasTT } from '@/lib/dummy-data'
-import { BedDouble, Save, RefreshCw, CheckCircle2, AlertTriangle } from 'lucide-react'
+import { BedDouble, Save, RefreshCw, CheckCircle2, AlertTriangle, FileText } from 'lucide-react'
 import clsx from 'clsx'
 
 type TTRow = {
@@ -50,22 +50,31 @@ export default function TempatTidurPage() {
             Rabu, 20 Mei 2026 &nbsp;·&nbsp; Input 2× sehari (Pagi & Sore)
           </p>
         </div>
-        {/* Shift toggle */}
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-slate-500">Shift:</span>
-          {(['P', 'S'] as const).map(s => (
-            <button key={s}
-              onClick={() => setShift(s)}
-              className={clsx(
-                'px-4 py-1.5 rounded-lg text-sm font-semibold border transition-all',
-                shift === s
-                  ? 'bg-blue-700 text-white border-blue-700 shadow-sm'
-                  : 'bg-white text-slate-600 border-slate-300 hover:border-blue-300'
-              )}
-            >
-              {s === 'P' ? '🌅 Pagi (06.00)' : '🌆 Sore (18.00)'}
-            </button>
-          ))}
+        {/* Shift toggle & PDF */}
+        <div className="flex items-center gap-3">
+          <a
+            href="/reports/RL1.pdf"
+            download
+            className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-600 rounded-lg text-sm font-semibold hover:bg-slate-50 transition-all shadow-sm"
+          >
+            <FileText className="w-4 h-4" /> Cetak PDF
+          </a>
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-slate-500">Shift:</span>
+            {(['P', 'S'] as const).map(s => (
+              <button key={s}
+                onClick={() => setShift(s)}
+                className={clsx(
+                  'px-4 py-1.5 rounded-lg text-sm font-semibold border transition-all',
+                  shift === s
+                    ? 'bg-blue-700 text-white border-blue-700 shadow-sm'
+                    : 'bg-white text-slate-600 border-slate-300 hover:border-blue-300'
+                )}
+              >
+                {s === 'P' ? '🌅 Pagi (06.00)' : '🌆 Sore (18.00)'}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

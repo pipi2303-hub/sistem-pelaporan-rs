@@ -241,7 +241,15 @@ export default function WorkflowPage() {
               </div>
 
               {/* Quick action */}
-              <div className="px-4 pb-4 pt-0">
+              <div className="px-4 pb-4 pt-0 space-y-2">
+                <a
+                  href={`/reports/${selected.kode.split(' ')[0]}.pdf`}
+                  download
+                  className="w-full py-2 border border-slate-200 text-slate-600 rounded-lg text-xs font-semibold hover:bg-slate-50 transition-colors flex items-center justify-center gap-2"
+                >
+                  <FileText className="w-3.5 h-3.5" /> Cetak Laporan (PDF)
+                </a>
+
                 {selected.status === 'draft' && (
                   <button onClick={() => handleTransition(selected.id, 'submitted')}
                     className="w-full py-2 bg-purple-600 text-white rounded-lg text-xs font-semibold hover:bg-purple-700 transition-colors">
