@@ -22,6 +22,9 @@ import {
   Ambulance,
   Baby,
   Calendar,
+  Scan,
+  ArrowRightLeft,
+  UserCheck,
 } from 'lucide-react'
 
 interface NavItem {
@@ -59,9 +62,13 @@ const navItems: NavItem[] = [
       { href: '/rl3/sensus-harian', label: 'Sensus Harian', icon: <Calendar className="w-3.5 h-3.5" /> },
       { href: '/rl3/indikator', label: 'Indikator (RL 3.1)', icon: <Activity className="w-3.5 h-3.5" /> },
       { href: '/rl3/rawat-inap', label: 'Rawat Inap (RL 3.2)', icon: <BedDouble className="w-3.5 h-3.5" /> },
+      { href: '/rl3/rawat-jalan', label: 'Rawat Jalan (RL 3.3)', icon: <UserCheck className="w-3.5 h-3.5" /> },
       { href: '/rl3/igd', label: 'IGD (RL 3.4)', icon: <Ambulance className="w-3.5 h-3.5" /> },
       { href: '/rl3/kebidanan', label: 'Kebidanan (RL 3.6)', icon: <Baby className="w-3.5 h-3.5" /> },
+      { href: '/rl3/neonatal', label: 'Neonatal (RL 3.7)', icon: <Baby className="w-3.5 h-3.5" /> },
       { href: '/rl3/laboratorium', label: 'Laboratorium (RL 3.8)', icon: <FlaskConical className="w-3.5 h-3.5" /> },
+      { href: '/rl3/radiologi', label: 'Radiologi (RL 3.9)', icon: <Scan className="w-3.5 h-3.5" /> },
+      { href: '/rl3/rujukan', label: 'Rujukan (RL 3.10)', icon: <ArrowRightLeft className="w-3.5 h-3.5" /> },
       { href: '/rl3/farmasi', label: 'Farmasi (RL 3.17)', icon: <Pill className="w-3.5 h-3.5" /> },
     ],
   },

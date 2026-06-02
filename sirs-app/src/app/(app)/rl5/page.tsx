@@ -7,6 +7,12 @@ import clsx from 'clsx'
 
 export default function MorbiditasRJPage() {
   const [data] = useState(morbiditasRJ)
+  const [search, setSearch] = useState('')
+  const filteredData = data.filter(r =>
+    search === '' ||
+    r.kode.toLowerCase().includes(search.toLowerCase()) ||
+    r.diagnosis.toLowerCase().includes(search.toLowerCase())
+  )
   const totalBaru = data.reduce((s, r) => s + r.lBaru + r.pBaru, 0)
 
   return (
@@ -34,7 +40,7 @@ export default function MorbiditasRJPage() {
           <div className="flex items-center gap-3">
              <div className="relative flex-1">
                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-               <input type="text" placeholder="Cari diagnosis atau kode ICD-10..." className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-xl bg-white shadow-sm text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+               <input type="text" placeholder="Cari diagnosis atau kode ICD-10..." value={search} onChange={e => setSearch(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-xl bg-white shadow-sm text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
              </div>
              <button className="p-2 border border-slate-200 rounded-xl bg-white hover:bg-slate-50 transition-colors">
                <Filter className="w-5 h-5 text-slate-400" />
@@ -54,7 +60,7 @@ export default function MorbiditasRJPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-50">
-                {data.map((row, idx) => (
+                {filteredData.map((row, idx) => (
                   <tr key={idx} className="hover:bg-blue-50/30 transition-colors group">
                     <td className="px-6 py-4">
                       <span className="font-mono font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded text-xs">{row.kode}</span>
