@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd sirs-app && npm run build",
+  "outputDirectory": "sirs-app/.next",
+  "installCommand": "npm --prefix sirs-app install",
+  "framework": "nextjs"
+}
