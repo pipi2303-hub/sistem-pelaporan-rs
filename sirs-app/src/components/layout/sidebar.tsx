@@ -54,6 +54,7 @@ const navItems: NavItem[] = [
     icon: <Building2 className="w-4 h-4" />,
     children: [
       { href: '/rl1/profil', label: 'Profil Rumah Sakit (RL 1.1)' },
+      { href: '/rl1/ketersediaan-pelayanan', label: 'Ketersediaan Pelayanan (RL 1.2)' },
       { href: '/rl1/tempat-tidur', label: 'Tempat Tidur (RL 1.3)' },
     ],
   },
