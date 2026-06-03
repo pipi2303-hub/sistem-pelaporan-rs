@@ -68,7 +68,7 @@ const navItems: NavItem[] = [
     label: 'RL 3 — Rawat Inap',
     icon: <BedDouble className="w-4 h-4" />,
     children: [
-      { href: '/rl3/sensus-harian', label: 'Sensus Harian', icon: <Calendar className="w-3.5 h-3.5" /> },
+      // { href: '/rl3/sensus-harian', label: 'Sensus Harian', icon: <Calendar className="w-3.5 h-3.5" /> },
       { href: '/rl3/indikator', label: 'Indikator Pelayanan (RL 3.1)', icon: <Activity className="w-3.5 h-3.5" /> },
       { href: '/rl3/rawat-inap', label: 'Rekapitulasi Pelayanan Rawat Darurat (RL 3.2)', icon: <BedDouble className="w-3.5 h-3.5" /> },
       { href: '/rl3/rawat-jalan', label: 'Pelayanan Rawat Darurat (RL 3.3)', icon: <UserCheck className="w-3.5 h-3.5" /> },
