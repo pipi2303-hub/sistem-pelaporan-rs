@@ -63,6 +63,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'cara-bayar': 'Rekapitulasi Cara Bayar (RL 3.19)',
     'rl4': 'RL 4 - Data Kompilasi Penyakit/Morbiditas Pasien Rawat Inap',
     'morbiditas-ri': 'Kompilasi Penyakit/Morbiditas Pasien Rawat Inap (RL 4.1)',
+    'sepuluh-besar-ri': '10 Besar Penyakit Rawat Inap (RL 4.2)',
     'rl5': 'Morbiditas RJ (RL 5.1)',
     'workflow': 'Workflow & Status',
     'admin': 'Administrasi',

@@ -30,6 +30,7 @@ import {
   Heart,
   CreditCard,
   Microscope,
+  Trophy,
 } from 'lucide-react'
 
 interface NavItem {
@@ -92,6 +93,7 @@ const navItems: NavItem[] = [
     icon: <Stethoscope className="w-4 h-4" />,
     children: [
       { href: '/rl4/morbiditas-ri', label: 'Kompilasi Penyakit/Morbiditas Pasien Rawat Inap (RL 4.1)', icon: <Microscope className="w-3.5 h-3.5" /> },
+      { href: '/rl4/sepuluh-besar-ri', label: '10 Besar Penyakit Rawat Inap (RL 4.2)', icon: <Trophy className="w-3.5 h-3.5" /> },
     ],
   },
   {
