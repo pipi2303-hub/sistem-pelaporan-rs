@@ -41,6 +41,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'rl1': 'RL 1',
     'profil': 'Profil Rumah Sakit (RL 1.1)',
     'ketersediaan-pelayanan': 'Ketersediaan Pelayanan (RL 1.2)',
+    'aspak': 'Sarana Prasarana dan Alat Kesehatan (RL 1.4)',
     'tempat-tidur': 'Tempat Tidur',
     'rl2': 'Ketenagaan (RL 2)',
     'rl3': 'RL 3',

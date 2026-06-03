@@ -56,6 +56,7 @@ const navItems: NavItem[] = [
       { href: '/rl1/profil', label: 'Profil Rumah Sakit (RL 1.1)' },
       { href: '/rl1/ketersediaan-pelayanan', label: 'Ketersediaan Pelayanan (RL 1.2)' },
       { href: '/rl1/tempat-tidur', label: 'Tempat Tidur (RL 1.3)' },
+      { href: '/rl1/aspak', label: 'Sarana Prasarana dan Alat Kesehatan (RL 1.4)' },
     ],
   },
   {
