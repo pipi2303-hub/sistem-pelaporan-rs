@@ -47,7 +47,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'indikator': 'Indikator',
     'rawat-inap': 'Rawat Inap (RL 3.2)',
     'igd': 'IGD (RL 3.4)',
-    'kebidanan': 'Kebidanan (RL 3.6)',
+    'kebidanan': 'Rekapitulasi Kegiatan Pelayanan Kebidanan',
     'laboratorium': 'Laboratorium (RL 3.8)',
     'farmasi': 'Farmasi (RL 3.17)',
     'rl4': 'Morbiditas RI (RL 4.1)',
