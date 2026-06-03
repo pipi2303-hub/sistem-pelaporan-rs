@@ -19,7 +19,7 @@ export default function RawatInapPelayananPage() {
         <div className="flex items-center gap-2">
           <BedDouble className="w-5 h-5 text-blue-700" />
           <div>
-            <h1 className="text-xl font-bold text-slate-900">Rekapitulasi Pelayanan Rawat Daruat (RL 3.2)</h1>
+            <h1 className="text-xl font-bold text-slate-900">Rekapitulasi Pelayanan Rawat Darurat (RL 3.2)</h1>
             <p className="text-sm text-slate-500">Rekapitulasi pasien masuk dan keluar — {infoRS.periodeAktif}</p>
           </div>
         </div>

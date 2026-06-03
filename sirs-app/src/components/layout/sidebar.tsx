@@ -68,7 +68,7 @@ const navItems: NavItem[] = [
     children: [
       { href: '/rl3/sensus-harian', label: 'Sensus Harian', icon: <Calendar className="w-3.5 h-3.5" /> },
       { href: '/rl3/indikator', label: 'Indikator Pelayanan (RL 3.1)', icon: <Activity className="w-3.5 h-3.5" /> },
-      { href: '/rl3/rawat-inap', label: 'Rekapitulasi Pelayanan Rawat Daruat (RL 3.2)', icon: <BedDouble className="w-3.5 h-3.5" /> },
+      { href: '/rl3/rawat-inap', label: 'Rekapitulasi Pelayanan Rawat Darurat (RL 3.2)', icon: <BedDouble className="w-3.5 h-3.5" /> },
       { href: '/rl3/rawat-jalan', label: 'Pelayanan Rawat Darurat (RL 3.3)', icon: <UserCheck className="w-3.5 h-3.5" /> },
       { href: '/rl3/igd', label: 'Rekapitulasi Pengunjung (RL 3.4)', icon: <Ambulance className="w-3.5 h-3.5" /> },
       { href: '/rl3/rekapitulasi-kunjungan', label: 'Rekapitulasi Kunjungan (RL 3.5)', icon: <Users className="w-3.5 h-3.5" /> },
