@@ -104,6 +104,7 @@ const navItems: NavItem[] = [
     icon: <ClipboardList className="w-4 h-4" />,
     children: [
       { href: '/rl5/morbiditas-rj', label: 'Kompilasi Morbiditas Pasien Rawat Jalan (RL 5.1)', icon: <ClipboardList className="w-3.5 h-3.5" /> },
+      { href: '/rl5/sepuluh-besar-rj', label: '10 Besar Kasus Baru Penyakit Rawat Jalan (RL 5.2)', icon: <Trophy className="w-3.5 h-3.5" /> },
     ],
   },
   { section: 'MANAJEMEN' },

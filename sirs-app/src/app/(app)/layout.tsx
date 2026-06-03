@@ -67,6 +67,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'sepuluh-besar-mati-ri': '10 Besar Kematian Penyakit Rawat Inap (RL 4.3)',
     'rl5': 'RL 5 - Data Kompilasi Penyakit/Morbiditas Pasien Rawat Jalan',
     'morbiditas-rj': 'Kompilasi Morbiditas Pasien Rawat Jalan (RL 5.1)',
+    'sepuluh-besar-rj': '10 Besar Kasus Baru Penyakit Rawat Jalan (RL 5.2)',
     'workflow': 'Workflow & Status',
     'admin': 'Administrasi',
   }
