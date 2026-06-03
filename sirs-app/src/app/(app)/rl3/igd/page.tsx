@@ -61,29 +61,6 @@ export default function RekPengunjungPage() {
         </table>
       </div>
 
-      {/* Petunjuk pengisian */}
-      <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 space-y-3 max-w-3xl">
-        <p className="text-sm font-semibold text-slate-700">Pengisian formulir 3.4 Rekapitulasi Pengunjung sebagai berikut:</p>
-        <ol className="list-decimal list-outside pl-5 space-y-2 text-sm text-slate-600">
-          <li>
-            Pengunjung Baru adalah pengunjung yang baru pertama kali datang ke Rumah Sakit dan mendapatkan nomor rekam medis baru. Nomor rekam medis diberikan hanya sekali seumur hidup. Pengunjung baru dapat melakukan kunjungan di beberapa Poliklinik atau IGD sebagai kunjungan baru dengan kasus baru.
-          </li>
-          <li>
-            Pengunjung Lama adalah pengunjung yang datang untuk kedua kali dan seterusnya, yang datang ke poliklinik yang sama atau berbeda sebagai kunjungan lama atau kunjungan baru dengan kasus lama atau kasus baru. Pengunjung lama tidak mendapat Nomor Rekam Medis lagi.
-          </li>
-          <li>
-            Jika 1 pasien datang beberapa kali dalam 1 bulan, maka hanya dihitung sebagai 1 pengunjung lama.
-          </li>
-          <li>
-            Contoh kasus:
-            <ol className="list-[lower-alpha] list-outside pl-5 mt-1 space-y-1">
-              <li>Pasien A baru datang pertama kali ke RS di bulan Januari 2024, dapat nomor rekam medis, datang ke poliklinik, maka dihitung sebagai 1 pengunjung baru.</li>
-              <li>Pasien A datang lagi ke RS di bulan Januari 2024, ke IGD atau Rawat Jalan atau Rawat Inap atau ke unit penunjang, dengan kasus sama/berbeda, maka dihitung sebagai 1 pengunjung lama.</li>
-              <li>Pasien A datang lagi ke RS di bulan Januari 2024, berbeda hari, ke IGD atau Rawat Jalan atau Rawat Inap atau ke unit penunjang, dengan kasus sama/berbeda, maka tidak dihitung ke pengunjung lagi.</li>
-            </ol>
-          </li>
-        </ol>
-      </div>
     </div>
   )
 }
