@@ -102,6 +102,9 @@ const navItems: NavItem[] = [
     href: '/rl5',
     label: 'RL 5 - Data Kompilasi Penyakit/Morbiditas Pasien Rawat Jalan',
     icon: <ClipboardList className="w-4 h-4" />,
+    children: [
+      { href: '/rl5/morbiditas-rj', label: 'Kompilasi Morbiditas Pasien Rawat Jalan (RL 5.1)', icon: <ClipboardList className="w-3.5 h-3.5" /> },
+    ],
   },
   { section: 'MANAJEMEN' },
   {
