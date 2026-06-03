@@ -43,7 +43,7 @@ export default function IndikatorPage() {
         <div className="flex items-center gap-2">
           <BarChart3 className="w-5 h-5 text-blue-700" />
           <div>
-            <h1 className="text-xl font-bold text-slate-900">Indikator Rawat Inap (RL 3.1)</h1>
+            <h1 className="text-xl font-bold text-slate-900">Indikator Pelayanan (RL 3.1)</h1>
             <p className="text-sm text-slate-500">BOR, ALOS, BTO, TOI, NDR, GDR — auto-generate dari sensus harian</p>
           </div>
         </div>
