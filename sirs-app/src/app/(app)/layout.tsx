@@ -59,6 +59,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'kesehatan-jiwa': 'Rekapitulasi Kegiatan Pelayanan Kesehatan Jiwa (RL 3.15)',
     'keluarga-berencana': 'Rekapitulasi Kegiatan Pelayanan Keluarga Berencana (RL 3.16)',
     'farmasi': 'Rekapitulasi Kegiatan Pelayanan Farmasi RS - Pengadaan Obat (RL 3.17)',
+    'farmasi-resep': 'Rekapitulasi Kegiatan Pelayanan Farmasi Rumah Sakit - Resep (RL 3.18)',
     'rl4': 'Morbiditas RI (RL 4.1)',
     'rl5': 'Morbiditas RJ (RL 5.1)',
     'workflow': 'Workflow & Status',
