@@ -25,7 +25,7 @@ export default function LoginPage() {
         username: 'admin',
         name: 'dr. Adminstrator',
         role: 'Admin',
-        hospital: 'RSUD Dr. Soetomo',
+        hospital: 'RS Intramedika',
         loginAt: new Date().toISOString(),
       }))
       router.push('/dashboard')
@@ -34,7 +34,7 @@ export default function LoginPage() {
         username: 'validator',
         name: 'Anita Rahayu, SKM',
         role: 'Validator',
-        hospital: 'RSUD Dr. Soetomo',
+        hospital: 'RS Intramedika',
         loginAt: new Date().toISOString(),
       }))
       router.push('/dashboard')

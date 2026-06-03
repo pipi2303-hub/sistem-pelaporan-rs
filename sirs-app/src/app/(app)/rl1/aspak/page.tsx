@@ -128,7 +128,7 @@ function TabRingkasan() {
           <table className="w-full text-sm">
             <tbody>
               {[
-                ['Nama RS', 'RSUD Dr. Soetomo'],
+                ['Nama RS', 'RS Intramedika'],
                 ['Kelas', 'B'],
                 ['Kepemilikan', 'Pemerintah Daerah'],
                 ['Status Operasional', 'Aktif'],

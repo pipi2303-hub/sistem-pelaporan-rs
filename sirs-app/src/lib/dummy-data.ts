@@ -484,7 +484,7 @@ export const morbiditasRJ: MorbiditasRI[] = [
 
 // --- Info Rumah Sakit ---
 export const infoRS = {
-  nama: 'RSUD Dr. Soetomo',
+  nama: 'RS Intramedika',
   kodeRS: '3578003',
   jenis: 'Rumah Sakit Umum',
   kelas: 'A',

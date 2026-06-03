@@ -102,7 +102,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             <div className="flex items-center gap-2 flex-1 min-w-0">
               <Building2 className="w-4 h-4 text-blue-700 flex-shrink-0" />
               <span className="text-sm font-semibold text-slate-800 truncate">
-                RSUD Dr. Soetomo
+                RS Intramedika
               </span>
               <span className="hidden md:flex items-center gap-1 text-slate-300 text-sm">
                 <span>/</span>

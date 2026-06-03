@@ -34,7 +34,7 @@ interface ModulRow {
 // ─── Initial Data ───────────────────────────────────────────────────────────
 
 const INIT_A = {
-  namaFasyankes: 'RSUD Dr. Soetomo',
+  namaFasyankes: 'RS Intramedika',
   tahunBerdiri: 1938,
   direktur: 'dr. Ahmad Basuki, Sp.PD, KGEH',
   jenis: 'RS Umum',
@@ -48,8 +48,8 @@ const INIT_A = {
   luasTanah: 165000,
   luasBangunan: 87500,
   telepon: '(031) 5501078',
-  email: 'info@rssoetomo.jatimprov.go.id',
-  website: 'https://rssoetomo.jatimprov.go.id',
+  email: 'info@rs-intramedika.co.id',
+  website: 'https://rs-intramedika.co.id',
 }
 
 const INIT_B = {
@@ -84,7 +84,7 @@ const INIT_C = {
   longitude: '112.7525',
   namaKaIFRS: 'apt. Sari Dewi, S.Farm., M.Kes.',
   telpKaIFRS: '08123456789',
-  emailKaIFRS: 'ifrs@rssoetomo.jatimprov.go.id',
+  emailKaIFRS: 'ifrs@rs-intramedika.co.id',
   kerjasamaPSEF: 'Ya',
   kerjasamaFKFKG: 'FK Universitas Airlangga, FKG Universitas Airlangga, FK Universitas Hang Tuah',
 }
@@ -95,7 +95,7 @@ const INIT_F_TOP = {
   kondisiInternet: 'Akses baik',
   picNama: 'Budi Santoso, S.Kom.',
   picNIK: '3578012345670001',
-  picEmail: 'satusehat@rssoetomo.jatimprov.go.id',
+  picEmail: 'satusehat@rs-intramedika.co.id',
   picTelp: '081234567890',
   picJabatan: 'Kepala Instalasi IT',
 }
