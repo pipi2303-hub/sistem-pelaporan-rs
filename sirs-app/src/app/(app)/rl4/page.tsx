@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { morbiditasRI, icd10List, kelompokUmur, sepuluhBesarPenyakit, type MorbiditasRI } from '@/lib/dummy-data'
-import { Plus, Search, X, CheckCircle2, AlertTriangle, Trophy, Microscope, FileText } from 'lucide-react'
+import { morbiditasRI, icd10List, kelompokUmur, type MorbiditasRI } from '@/lib/dummy-data'
+import { Plus, Search, X, CheckCircle2, AlertTriangle, Microscope, FileText } from 'lucide-react'
 import clsx from 'clsx'
 
 export default function MorbiditasRIPage() {
@@ -58,18 +58,13 @@ export default function MorbiditasRIPage() {
   const totalKasus = rows.reduce((s, r) => s + r.lBaru + r.pBaru, 0)
   const totalMati  = rows.reduce((s, r) => s + r.lMati + r.pMati, 0)
 
-  // Top 10 from current rows
-  const top10 = [...rows]
-    .sort((a, b) => (b.lBaru + b.pBaru) - (a.lBaru + a.pBaru))
-    .slice(0, 10)
-
   return (
     <div className="space-y-5">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="flex items-center gap-2">
           <Microscope className="w-5 h-5 text-blue-700" />
           <div>
-            <h1 className="text-xl font-bold text-slate-900">Morbiditas Rawat Inap (RL 4.1)</h1>
+            <h1 className="text-xl font-bold text-slate-900">RL 4 - Data Kompilasi Penyakit/Morbiditas Pasien Rawat Inap</h1>
             <p className="text-sm text-slate-500">Data diagnosis per ICD-10, kelompok umur &amp; jenis kelamin — Tahunan 2025</p>
           </div>
         </div>
@@ -127,9 +122,7 @@ export default function MorbiditasRIPage() {
         </div>
       )}
 
-      <div className="flex gap-4">
-        {/* Main table */}
-        <div className="flex-1 min-w-0 space-y-3">
+      <div className="space-y-3">
           {/* Search + validate */}
           <div className="flex items-center gap-3">
             <div className="relative flex-1">
@@ -202,32 +195,6 @@ export default function MorbiditasRIPage() {
             </div>
           </div>
           <p className="text-xs text-slate-400">{filteredRows.length} dari {rows.length} baris ditampilkan</p>
-        </div>
-
-        {/* 10 Besar sidebar */}
-        <div className="w-64 flex-shrink-0">
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden sticky top-20">
-            <div className="px-4 py-3 border-b border-slate-100 bg-yellow-50 flex items-center gap-2">
-              <Trophy className="w-4 h-4 text-yellow-600" />
-              <p className="text-xs font-semibold text-slate-700">10 Besar Penyakit RI</p>
-            </div>
-            <div className="divide-y divide-slate-50">
-              {top10.map((r, i) => (
-                <div key={r.id} className="flex items-center gap-2 px-3 py-2 hover:bg-slate-50 transition-colors">
-                  <span className={clsx(
-                    'w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold flex-shrink-0',
-                    i < 3 ? 'bg-blue-700 text-white' : 'bg-slate-100 text-slate-500'
-                  )}>{i + 1}</span>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-[11px] font-semibold text-slate-700 truncate">{r.diagnosis.split(',')[0]}</p>
-                    <p className="text-[10px] text-slate-400">{r.kode}</p>
-                  </div>
-                  <span className="text-xs font-bold text-blue-700 flex-shrink-0">{r.lBaru + r.pBaru}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Modal */}

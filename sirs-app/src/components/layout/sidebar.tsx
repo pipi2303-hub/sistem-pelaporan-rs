@@ -87,7 +87,7 @@ const navItems: NavItem[] = [
   },
   {
     href: '/rl4',
-    label: 'RL 4 — Morbiditas RI',
+    label: 'RL 4 - Data Kompilasi Penyakit/Morbiditas Pasien Rawat Inap',
     icon: <Stethoscope className="w-4 h-4" />,
   },
   {
