@@ -73,6 +73,7 @@ const navItems: NavItem[] = [
       { href: '/rl3/rujukan', label: 'Rekapitulasi Kegiatan Pelayanan Rujukan (RL 3.10)', icon: <ArrowRightLeft className="w-3.5 h-3.5" /> },
       { href: '/rl3/gigi-mulut', label: 'Rekapitulasi Kegiatan Pelayanan Gigi dan Mulut (RL 3.11)', icon: <Smile className="w-3.5 h-3.5" /> },
       { href: '/rl3/pembedahan', label: 'Rekapitulasi Kegiatan Pelayanan Pembedahan (RL 3.12)', icon: <Stethoscope className="w-3.5 h-3.5" /> },
+      { href: '/rl3/rehabilitasi-medik', label: 'Rekapitulasi Kegiatan Pelayanan Rehabilitasi Medik (RL 3.13)', icon: <Activity className="w-3.5 h-3.5" /> },
       { href: '/rl3/farmasi', label: 'Farmasi (RL 3.17)', icon: <Pill className="w-3.5 h-3.5" /> },
     ],
   },
