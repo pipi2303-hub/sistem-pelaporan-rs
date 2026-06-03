@@ -17,7 +17,7 @@ export default function LaboratoriumPage() {
         <div className="flex items-center gap-2">
           <FlaskConical className="w-5 h-5 text-indigo-600" />
           <div>
-            <h1 className="text-xl font-bold text-slate-900">Laboratorium (RL 3.8)</h1>
+            <h1 className="text-xl font-bold text-slate-900">Rekapitulasi Kegiatan Pelayanan Laboratorium (RL 3.8)</h1>
             <p className="text-sm text-slate-500">Jumlah pemeriksaan berdasarkan jenis — {infoRS.periodeAktif}</p>
           </div>
         </div>

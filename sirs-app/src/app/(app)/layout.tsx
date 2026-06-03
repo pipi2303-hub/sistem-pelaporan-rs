@@ -49,7 +49,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'igd': 'IGD (RL 3.4)',
     'kebidanan': 'Rekapitulasi Kegiatan Pelayanan Kebidanan',
     'neonatal': 'Rekapitulasi Kegiatan Pelayanan Neonatal, Bayi, dan Balita (RL 3.7)',
-    'laboratorium': 'Laboratorium (RL 3.8)',
+    'laboratorium': 'Rekapitulasi Kegiatan Pelayanan Laboratorium (RL 3.8)',
     'farmasi': 'Farmasi (RL 3.17)',
     'rl4': 'Morbiditas RI (RL 4.1)',
     'rl5': 'Morbiditas RJ (RL 5.1)',
