@@ -45,7 +45,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'rl3': 'RL 3',
     'sensus-harian': 'Sensus Harian',
     'indikator': 'Indikator Pelayanan (RL 3.1)',
-    'rawat-inap': 'Rekapitulasi Pelayanan Rawat Inap (RL 3.2)',
+    'rawat-inap': 'Rekapitulasi Pelayanan Rawat Daruat (RL 3.2)',
     'igd': 'IGD (RL 3.4)',
     'kebidanan': 'Rekapitulasi Kegiatan Pelayanan Kebidanan',
     'neonatal': 'Rekapitulasi Kegiatan Pelayanan Neonatal, Bayi, dan Balita (RL 3.7)',
