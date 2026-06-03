@@ -73,7 +73,7 @@ export default function RadiologiPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold text-slate-800">RL 3.9 — Radiologi</h1>
+          <h1 className="text-xl font-bold text-slate-800">Rekapitulasi Kegiatan Pelayanan Radiologi (RL 3.9)</h1>
           <p className="text-sm text-slate-500 mt-0.5">Pemeriksaan radiologi per jenis & asal pasien • Mei 2026</p>
         </div>
         <a

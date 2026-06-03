@@ -50,6 +50,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'kebidanan': 'Rekapitulasi Kegiatan Pelayanan Kebidanan',
     'neonatal': 'Rekapitulasi Kegiatan Pelayanan Neonatal, Bayi, dan Balita (RL 3.7)',
     'laboratorium': 'Rekapitulasi Kegiatan Pelayanan Laboratorium (RL 3.8)',
+    'radiologi': 'Rekapitulasi Kegiatan Pelayanan Radiologi (RL 3.9)',
     'farmasi': 'Farmasi (RL 3.17)',
     'rl4': 'Morbiditas RI (RL 4.1)',
     'rl5': 'Morbiditas RJ (RL 5.1)',
