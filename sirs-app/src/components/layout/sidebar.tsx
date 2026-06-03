@@ -28,6 +28,7 @@ import {
   Smile,
   Brain,
   Heart,
+  CreditCard,
 } from 'lucide-react'
 
 interface NavItem {
@@ -81,6 +82,7 @@ const navItems: NavItem[] = [
       { href: '/rl3/keluarga-berencana', label: 'Rekapitulasi Kegiatan Pelayanan Keluarga Berencana (RL 3.16)', icon: <Heart className="w-3.5 h-3.5" /> },
       { href: '/rl3/farmasi', label: 'Rekapitulasi Kegiatan Pelayanan Farmasi RS - Pengadaan Obat (RL 3.17)', icon: <Pill className="w-3.5 h-3.5" /> },
       { href: '/rl3/farmasi-resep', label: 'Rekapitulasi Kegiatan Pelayanan Farmasi Rumah Sakit - Resep (RL 3.18)', icon: <Pill className="w-3.5 h-3.5" /> },
+      { href: '/rl3/cara-bayar', label: 'Rekapitulasi Cara Bayar (RL 3.19)', icon: <CreditCard className="w-3.5 h-3.5" /> },
     ],
   },
   {
