@@ -29,6 +29,7 @@ import {
   Brain,
   Heart,
   CreditCard,
+  Microscope,
 } from 'lucide-react'
 
 interface NavItem {
@@ -89,6 +90,9 @@ const navItems: NavItem[] = [
     href: '/rl4',
     label: 'RL 4 - Data Kompilasi Penyakit/Morbiditas Pasien Rawat Inap',
     icon: <Stethoscope className="w-4 h-4" />,
+    children: [
+      { href: '/rl4/morbiditas-ri', label: 'Kompilasi Penyakit/Morbiditas Pasien Rawat Inap (RL 4.1)', icon: <Microscope className="w-3.5 h-3.5" /> },
+    ],
   },
   {
     href: '/rl5',
