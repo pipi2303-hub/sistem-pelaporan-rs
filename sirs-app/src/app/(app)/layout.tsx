@@ -56,6 +56,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'pembedahan': 'Rekapitulasi Kegiatan Pelayanan Pembedahan (RL 3.12)',
     'rehabilitasi-medik': 'Rekapitulasi Kegiatan Pelayanan Rehabilitasi Medik (RL 3.13)',
     'pelayanan-khusus': 'Rekapitulasi Kegiatan Pelayanan Khusus (RL 3.14)',
+    'kesehatan-jiwa': 'Rekapitulasi Kegiatan Pelayanan Kesehatan Jiwa (RL 3.15)',
     'farmasi': 'Farmasi (RL 3.17)',
     'rl4': 'Morbiditas RI (RL 4.1)',
     'rl5': 'Morbiditas RJ (RL 5.1)',

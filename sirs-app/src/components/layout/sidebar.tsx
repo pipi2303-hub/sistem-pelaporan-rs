@@ -26,6 +26,7 @@ import {
   ArrowRightLeft,
   UserCheck,
   Smile,
+  Brain,
 } from 'lucide-react'
 
 interface NavItem {
@@ -75,6 +76,7 @@ const navItems: NavItem[] = [
       { href: '/rl3/pembedahan', label: 'Rekapitulasi Kegiatan Pelayanan Pembedahan (RL 3.12)', icon: <Stethoscope className="w-3.5 h-3.5" /> },
       { href: '/rl3/rehabilitasi-medik', label: 'Rekapitulasi Kegiatan Pelayanan Rehabilitasi Medik (RL 3.13)', icon: <Activity className="w-3.5 h-3.5" /> },
       { href: '/rl3/pelayanan-khusus', label: 'Rekapitulasi Kegiatan Pelayanan Khusus (RL 3.14)', icon: <ClipboardList className="w-3.5 h-3.5" /> },
+      { href: '/rl3/kesehatan-jiwa', label: 'Rekapitulasi Kegiatan Pelayanan Kesehatan Jiwa (RL 3.15)', icon: <Brain className="w-3.5 h-3.5" /> },
       { href: '/rl3/farmasi', label: 'Farmasi (RL 3.17)', icon: <Pill className="w-3.5 h-3.5" /> },
     ],
   },
