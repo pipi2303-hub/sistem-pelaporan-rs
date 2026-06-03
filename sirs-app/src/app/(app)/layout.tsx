@@ -39,7 +39,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const breadcrumbMap: Record<string, string> = {
     'dashboard': 'Dashboard',
     'rl1': 'RL 1',
-    'profil': 'Profil RS',
+    'profil': 'Profil Rumah Sakit (RL 1.1)',
     'tempat-tidur': 'Tempat Tidur',
     'rl2': 'Ketenagaan (RL 2)',
     'rl3': 'RL 3',
