@@ -214,7 +214,7 @@ export default function KebidananPage() {
         <div className="flex items-center gap-2">
           <Baby className="w-5 h-5 text-pink-500" />
           <div>
-            <h1 className="text-xl font-bold text-slate-900">Kebidanan (RL 3.6)</h1>
+            <h1 className="text-xl font-bold text-slate-900">Rekapitulasi Kebidanan (RL 3.6)</h1>
             <p className="text-sm text-slate-500">Rekapitulasi kegiatan kebidanan — {infoRS.periodeAktif}</p>
           </div>
         </div>
