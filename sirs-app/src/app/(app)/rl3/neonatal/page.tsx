@@ -67,7 +67,7 @@ export default function NeonatalPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-bold text-slate-800">RL 3.7 — Neonatal</h1>
+          <h1 className="text-xl font-bold text-slate-800">Rekapitulasi Kegiatan Pelayanan Neonatal, Bayi, dan Balita (RL 3.7)</h1>
           <p className="text-sm text-slate-500 mt-0.5">Data kelahiran & perawatan neonatal • Mei 2026</p>
         </div>
         <a
