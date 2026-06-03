@@ -400,14 +400,27 @@ export const kelompokUmur = [
 
 // --- Rawat Inap per Jenis Pelayanan (RL 3.2) ---
 export const rawatInapPelayanan = [
-  { pelayanan: 'Penyakit Dalam', awal: 45, masuk: 120, pindahan: 12, keluarHidup: 115, keluarMatiLt48: 3, keluarMatiGe48: 5, dipindahkan: 8, akhir: 46, hariRawat: 850 },
-  { pelayanan: 'Bedah', awal: 30, masuk: 95, pindahan: 8, keluarHidup: 88, keluarMatiLt48: 1, keluarMatiGe48: 2, dipindahkan: 12, akhir: 30, hariRawat: 520 },
-  { pelayanan: 'Kesehatan Anak', awal: 25, masuk: 80, pindahan: 5, keluarHidup: 82, keluarMatiLt48: 1, keluarMatiGe48: 1, dipindahkan: 4, akhir: 22, hariRawat: 410 },
-  { pelayanan: 'Obstetri', awal: 18, masuk: 110, pindahan: 2, keluarHidup: 108, keluarMatiLt48: 0, keluarMatiGe48: 0, dipindahkan: 2, akhir: 20, hariRawat: 340 },
-  { pelayanan: 'Ginekologi', awal: 10, masuk: 45, pindahan: 1, keluarHidup: 42, keluarMatiLt48: 0, keluarMatiGe48: 0, dipindahkan: 3, akhir: 11, hariRawat: 180 },
-  { pelayanan: 'Bedah Saraf', awal: 12, masuk: 28, pindahan: 4, keluarHidup: 22, keluarMatiLt48: 2, keluarMatiGe48: 4, dipindahkan: 2, akhir: 14, hariRawat: 290 },
-  { pelayanan: 'Saraf', awal: 20, masuk: 55, pindahan: 6, keluarHidup: 52, keluarMatiLt48: 1, keluarMatiGe48: 3, dipindahkan: 5, akhir: 20, hariRawat: 420 },
-  { pelayanan: 'Jantung', awal: 15, masuk: 62, pindahan: 5, keluarHidup: 58, keluarMatiLt48: 2, keluarMatiGe48: 5, dipindahkan: 3, akhir: 14, hariRawat: 380 },
+  // pelayanan | awal | masuk | pindahan | dipindahkan | keluarHidup
+  // | matiLLt48 | matiLGe48 | matiPLt48 | matiPGe48
+  // | lamaDirawat | akhir | jumlahHariPerawatan
+  // | hpVVIP | hpVIP | hpI | hpII | hpIII | hpKhusus | alokasiTT
+  { pelayanan: 'Umum',                          awal: 8,  masuk: 22,  pindahan: 3,  dipindahkan: 2,  keluarHidup: 20,  matiLLt48: 0, matiLGe48: 1, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 88,  akhir: 10, jumlahHariPerawatan: 95,  hpVVIP: 5,  hpVIP: 10, hpI: 20, hpII: 35, hpIII: 25, hpKhusus: 0,  alokasiTT: 15  },
+  { pelayanan: 'Penyakit Dalam',                awal: 45, masuk: 120, pindahan: 12, dipindahkan: 8,  keluarHidup: 115, matiLLt48: 2, matiLGe48: 3, matiPLt48: 1, matiPGe48: 2, lamaDirawat: 810, akhir: 46, jumlahHariPerawatan: 850, hpVVIP: 20, hpVIP: 45, hpI: 180, hpII: 350, hpIII: 230, hpKhusus: 25, alokasiTT: 55  },
+  { pelayanan: 'Kesehatan Anak',                awal: 25, masuk: 80,  pindahan: 5,  dipindahkan: 4,  keluarHidup: 82,  matiLLt48: 1, matiLGe48: 0, matiPLt48: 0, matiPGe48: 1, lamaDirawat: 380, akhir: 22, jumlahHariPerawatan: 410, hpVVIP: 10, hpVIP: 25, hpI: 90, hpII: 180, hpIII: 95, hpKhusus: 10, alokasiTT: 30  },
+  { pelayanan: 'Kesehatan Remaja',              awal: 5,  masuk: 18,  pindahan: 1,  dipindahkan: 1,  keluarHidup: 19,  matiLLt48: 0, matiLGe48: 0, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 72,  akhir: 4,  jumlahHariPerawatan: 78,  hpVVIP: 3,  hpVIP: 8,  hpI: 18, hpII: 30, hpIII: 19, hpKhusus: 0,  alokasiTT: 10  },
+  { pelayanan: 'Obstetri',                      awal: 18, masuk: 110, pindahan: 2,  dipindahkan: 2,  keluarHidup: 108, matiLLt48: 0, matiLGe48: 0, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 320, akhir: 20, jumlahHariPerawatan: 340, hpVVIP: 15, hpVIP: 30, hpI: 70, hpII: 150, hpIII: 75, hpKhusus: 0,  alokasiTT: 25  },
+  { pelayanan: 'Ginekologi',                    awal: 10, masuk: 45,  pindahan: 1,  dipindahkan: 3,  keluarHidup: 42,  matiLLt48: 0, matiLGe48: 0, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 165, akhir: 11, jumlahHariPerawatan: 180, hpVVIP: 8,  hpVIP: 18, hpI: 40, hpII: 75, hpIII: 39, hpKhusus: 0,  alokasiTT: 15  },
+  { pelayanan: 'Bedah',                         awal: 30, masuk: 95,  pindahan: 8,  dipindahkan: 12, keluarHidup: 88,  matiLLt48: 1, matiLGe48: 1, matiPLt48: 0, matiPGe48: 1, lamaDirawat: 490, akhir: 30, jumlahHariPerawatan: 520, hpVVIP: 25, hpVIP: 55, hpI: 110, hpII: 210, hpIII: 110, hpKhusus: 10, alokasiTT: 40  },
+  { pelayanan: 'Bedah Orthopedi',               awal: 8,  masuk: 30,  pindahan: 2,  dipindahkan: 3,  keluarHidup: 28,  matiLLt48: 0, matiLGe48: 1, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 145, akhir: 8,  jumlahHariPerawatan: 160, hpVVIP: 8,  hpVIP: 20, hpI: 35, hpII: 65, hpIII: 30, hpKhusus: 2,  alokasiTT: 12  },
+  { pelayanan: 'Bedah Saraf',                   awal: 12, masuk: 28,  pindahan: 4,  dipindahkan: 2,  keluarHidup: 22,  matiLLt48: 1, matiLGe48: 3, matiPLt48: 1, matiPGe48: 1, lamaDirawat: 270, akhir: 14, jumlahHariPerawatan: 290, hpVVIP: 15, hpVIP: 30, hpI: 60, hpII: 120, hpIII: 60, hpKhusus: 5,  alokasiTT: 18  },
+  { pelayanan: 'Luka Bakar',                    awal: 4,  masuk: 12,  pindahan: 1,  dipindahkan: 1,  keluarHidup: 10,  matiLLt48: 1, matiLGe48: 1, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 90,  akhir: 4,  jumlahHariPerawatan: 100, hpVVIP: 0,  hpVIP: 5,  hpI: 15, hpII: 40, hpIII: 30, hpKhusus: 10, alokasiTT: 8   },
+  { pelayanan: 'Saraf',                         awal: 20, masuk: 55,  pindahan: 6,  dipindahkan: 5,  keluarHidup: 52,  matiLLt48: 1, matiLGe48: 1, matiPLt48: 0, matiPGe48: 2, lamaDirawat: 395, akhir: 20, jumlahHariPerawatan: 420, hpVVIP: 18, hpVIP: 40, hpI: 90, hpII: 175, hpIII: 90, hpKhusus: 7,  alokasiTT: 25  },
+  { pelayanan: 'Jiwa',                          awal: 6,  masuk: 15,  pindahan: 0,  dipindahkan: 1,  keluarHidup: 14,  matiLLt48: 0, matiLGe48: 0, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 180, akhir: 6,  jumlahHariPerawatan: 195, hpVVIP: 0,  hpVIP: 5,  hpI: 25, hpII: 90, hpIII: 75, hpKhusus: 0,  alokasiTT: 10  },
+  { pelayanan: 'Psikologi',                     awal: 2,  masuk: 8,   pindahan: 0,  dipindahkan: 0,  keluarHidup: 8,   matiLLt48: 0, matiLGe48: 0, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 48,  akhir: 2,  jumlahHariPerawatan: 52,  hpVVIP: 0,  hpVIP: 4,  hpI: 10, hpII: 25, hpIII: 13, hpKhusus: 0,  alokasiTT: 5   },
+  { pelayanan: 'Penatalaksanaan NAPZA',         awal: 3,  masuk: 10,  pindahan: 0,  dipindahkan: 0,  keluarHidup: 10,  matiLLt48: 0, matiLGe48: 0, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 90,  akhir: 3,  jumlahHariPerawatan: 98,  hpVVIP: 0,  hpVIP: 3,  hpI: 15, hpII: 45, hpIII: 35, hpKhusus: 0,  alokasiTT: 8   },
+  { pelayanan: 'THT',                           awal: 5,  masuk: 25,  pindahan: 1,  dipindahkan: 2,  keluarHidup: 25,  matiLLt48: 0, matiLGe48: 0, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 75,  akhir: 4,  jumlahHariPerawatan: 82,  hpVVIP: 4,  hpVIP: 10, hpI: 18, hpII: 32, hpIII: 18, hpKhusus: 0,  alokasiTT: 8   },
+  { pelayanan: 'Mata',                          awal: 4,  masuk: 20,  pindahan: 0,  dipindahkan: 1,  keluarHidup: 20,  matiLLt48: 0, matiLGe48: 0, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 60,  akhir: 3,  jumlahHariPerawatan: 65,  hpVVIP: 3,  hpVIP: 8,  hpI: 14, hpII: 26, hpIII: 14, hpKhusus: 0,  alokasiTT: 7   },
+  { pelayanan: 'Kulit dan Kelamin',             awal: 4,  masuk: 18,  pindahan: 1,  dipindahkan: 1,  keluarHidup: 18,  matiLLt48: 0, matiLGe48: 0, matiPLt48: 0, matiPGe48: 0, lamaDirawat: 65,  akhir: 4,  jumlahHariPerawatan: 70,  hpVVIP: 3,  hpVIP: 7,  hpI: 15, hpII: 28, hpIII: 15, hpKhusus: 2,  alokasiTT: 8   },
 ]
 
 // --- Kunjungan IGD (RL 3.4) ---
