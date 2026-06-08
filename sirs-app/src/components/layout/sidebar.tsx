@@ -61,7 +61,7 @@ const navItems: NavItem[] = [
   },
   {
     href: '/rl2',
-    label: 'RL 2 — Ketenagaan',
+    label: 'RL 2 — Data Tenaga Kesehatan',
     icon: <Users className="w-4 h-4" />,
   },
   {

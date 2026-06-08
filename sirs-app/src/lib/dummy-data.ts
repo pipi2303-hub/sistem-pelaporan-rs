@@ -193,7 +193,7 @@ export const morbiditasRI: MorbiditasRI[] = [
   { id: 17, kode: 'K80.2', diagnosis: 'Kolelitiasis dengan Kolesistitis Akut', kelUmur: '35-44', lBaru: 28, pBaru: 42, lMati: 0, pMati: 1, hariRawat: 350 },
 ]
 
-// --- Ketenagaan (RL 2) ---
+// --- Data Tenaga Kesehatan (RL 2) ---
 export const ketenagaan = [
   { jenis: 'Dokter Spesialis', s3: 2, s2sp: 48, s1d4: 0, d3: 0, d1d2: 0, smaKebawah: 0, total: 50, l: 32, p: 18 },
   { jenis: 'Dokter Umum', s3: 0, s2sp: 0, s1d4: 38, d3: 0, d1d2: 0, smaKebawah: 0, total: 38, l: 20, p: 18 },
@@ -267,7 +267,7 @@ export const workflowModules: WorkflowModule[] = [
   {
     id: 'rl2',
     kode: 'RL 2',
-    nama: 'Ketenagaan',
+    nama: 'Data Tenaga Kesehatan',
     deskripsi: 'Data SDM dan tenaga kesehatan',
     status: 'validated',
     submittedAt: '2026-05-10T10:00:00',

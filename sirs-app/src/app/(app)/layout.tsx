@@ -43,7 +43,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     'ketersediaan-pelayanan': 'Ketersediaan Pelayanan (RL 1.2)',
     'aspak': 'Sarana Prasarana dan Alat Kesehatan (RL 1.4)',
     'tempat-tidur': 'Tempat Tidur',
-    'rl2': 'Ketenagaan (RL 2)',
+    'rl2': 'Data Tenaga Kesehatan (RL 2)',
     'rl3': 'RL 3',
     'sensus-harian': 'Sensus Harian',
     'indikator': 'Indikator Pelayanan (RL 3.1)',

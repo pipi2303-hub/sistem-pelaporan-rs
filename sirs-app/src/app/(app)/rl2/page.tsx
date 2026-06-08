@@ -19,7 +19,7 @@ export default function KetenagaanPage() {
         <div className="flex items-center gap-2">
           <Users className="w-5 h-5 text-blue-700" />
           <div>
-            <h1 className="text-xl font-bold text-slate-900">Ketenagaan (RL 2)</h1>
+            <h1 className="text-xl font-bold text-slate-900">Data Tenaga Kesehatan (RL 2)</h1>
             <p className="text-sm text-slate-500">Data sumber daya manusia kesehatan — Tahunan 2025</p>
           </div>
         </div>
